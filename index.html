@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="Main">
-        <div class="functionalBtn"><button class="Btn"><p>сканировать</p></button></div>
+        <input type="file" accept="image/*" capture="camera" >
         <a href="grup.html"><div class="functionalBtn"><button class="Btn"> <p>группы</p></button></div></a>
         <div class="scan">
             
@@ -16,7 +16,8 @@
         </div>
     </div>
 </body>
- fileInp = form.querySelector("input")
+<script>
+    fileInp = form.querySelector("input")
 
 
 
@@ -34,4 +35,6 @@
         if(!result) return;
         document.querySelector("textarea").innerText = result
 })
+})
+</script>
 </html>
