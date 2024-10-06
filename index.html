@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="Main">
+        <form>
         <input type="file" accept="image/*" capture="camera" >
+        </form>
         <a href="grup.html"><div class="functionalBtn"><button class="Btn"> <p>группы</p></button></div></a>
         <div class="scan">
             
@@ -17,8 +19,9 @@
     </div>
 </body>
 <script>
+    form = document.querySelector("form"),
     fileInp = form.querySelector("input")
-
+    
 
 
 
@@ -33,8 +36,9 @@
         result = result[0].symbol[0].data
        
         if(!result) return;
-        document.querySelector("textarea").innerText = result
+       console.log(result)
 })
 })
+form.addEventListener("click", () => fileInp.click());
 </script>
 </html>
